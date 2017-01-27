@@ -1,6 +1,5 @@
 package com.github.arocketman.test;
 
-import com.github.arocketman.corejava.Dog;
 import com.github.arocketman.corejava.ReferencesAndValues;
 import org.junit.Test;
 
@@ -14,7 +13,7 @@ public class ReferencesAndValuesTest {
 
     @Test
     public void passByValueTest(){
-        Dog doggo = new Dog("Poe");
+        ReferencesAndValues.Dog doggo = new ReferencesAndValues.Dog("Poe");
         ReferencesAndValues.passByValue(doggo);
         assertEquals("Buddy",doggo.getName());
     }
