@@ -17,6 +17,7 @@ public class EqualsAndHashcodeTest {
         EqualsAndHashcode.Dog dog2= new EqualsAndHashcode().new Dog("Buddy",2,"male");
         EqualsAndHashcode.Dog dog3= new EqualsAndHashcode().new Dog("Flynn",2,"male");
 
+        //First two dogs are equal. Third one is different from both the first and the second.
         assertEquals(dog1,dog2);
         assertNotEquals(dog1,dog3);
         assertNotEquals(dog2,dog3);
@@ -27,7 +28,11 @@ public class EqualsAndHashcodeTest {
         EqualsAndHashcode.Dog dog2= new EqualsAndHashcode().new Dog("Buddy",2,"male");
         EqualsAndHashcode.Dog dog3= new EqualsAndHashcode().new Dog("Flynn",2,"male");
 
+        //Equal objects must return the same hashcode.
         assertEquals(dog1.hashCode(),dog2.hashCode());
+
+        //This test could actually fail! Different objects can produce the same hashcode. In the example this doesn't happen
+        //But it doesn't mean it couldn't have!
         assertNotEquals(dog1.hashCode(),dog3.hashCode());
         assertNotEquals(dog2.hashCode(),dog3.hashCode());
     }

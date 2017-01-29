@@ -1,7 +1,8 @@
 package com.github.arocketman.corejava;
 
 /**
- * Created by Andreuccio on 26/01/2017.
+ * This example aims to show how a Dog Object is passed to a function and how this is handled.
+ * To fully understand this you must check the attached test.
  */
 public class ReferencesAndValues {
 
@@ -13,10 +14,6 @@ public class ReferencesAndValues {
     public static void passByValue(Dog doggo){
         doggo.setName("Buddy");
     }
-
-    /**
-     * Created by Andreuccio on 26/01/2017.
-     */
 
     public static class Dog{
         String name;

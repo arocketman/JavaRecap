@@ -1,5 +1,11 @@
 package com.github.arocketman.corejava;
 
+/**
+ * Example of how to override equals and hashCode.
+ * Notice that we are assuming that both name and sex must be not null, while age is nullable.
+ * Thus, both in the equals and hashCode we will make sure that while the first two are indeed not null, the age Integer
+ * could be null and hence the situation should be handled accordingly.
+ */
 public class EqualsAndHashcode {
 
     public class Dog{
