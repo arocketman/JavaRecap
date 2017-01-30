@@ -22,4 +22,29 @@ public class PolymorphismTest {
         assertEquals("Name: A , Surname : Customer , salary : Simple",p2.getDescription());
     }
 
+    @Test
+    public void polymorphicArray(){
+        //Declaring an array with a given length. This length cannot be changed.
+        Polymorphism.Person [] arrayOfPersons = new Polymorphism.Person[10];
+        //We fill the array with a random class between employee and customer.
+        for(int i = 0; i < 10; i++){
+            double r = Math.random();
+            if(r < 0.5)
+                arrayOfPersons[i] = new Polymorphism().new Employee("An","Employee",1000);
+            else
+                arrayOfPersons[i] = new Polymorphism().new Customer("A","Customer","Simple");
+        }
+
+        //We can call the getDescription() method and either the employee one or the customer one will be called.
+        //This is possible because they're both inheriting from the Person class.
+        for(Polymorphism.Person p : arrayOfPersons){
+            System.out.println(p.getDescription());
+            //Let's make sure that if the description is the one of an employee it's an Employee class.
+            if(p.getDescription().equals("Name: An , Surname : Employee , salary : 1000"))
+                assertEquals(Polymorphism.Employee.class,p.getClass());
+            else
+                assertEquals(Polymorphism.Customer.class,p.getClass());
+        }
+    }
+
 }
