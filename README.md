@@ -8,5 +8,6 @@ This is a list of all the examples:
 ### Core java:
 
 * EqualsAndHashCode - An example of overriding equals and hashcode methods. In the test you can find how the two are used
-* Polymorphism - A simple example of runtime polymorphism.
+* Polymorphism - An example of runtime polymorphism and use of polymorphism with an array.
 * ReferencesAndValues - An example of how java handles passing objects to functions.
+* Generics - Examples of generic methods , generic methods with bounded parameters and use of generic ArrayList vs raw ones.

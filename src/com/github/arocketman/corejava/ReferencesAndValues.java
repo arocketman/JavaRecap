@@ -3,6 +3,7 @@ package com.github.arocketman.corejava;
 /**
  * This example aims to show how a Dog Object is passed to a function and how this is handled.
  * To fully understand this you must check the attached test.
+ * @see com.github.arocketman.test.ReferencesAndValuesTest
  */
 public class ReferencesAndValues {
 

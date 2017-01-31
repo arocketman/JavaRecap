@@ -6,6 +6,7 @@ package com.github.arocketman.corejava;
  * The point is to declare two variables of type Person, yet instantiate them as Employee and Customer.
  * At runtime, the correct getDescription method will be called according to what class is actually instanciated.
  * Polymorphism: The Person class assumes different shapes (i.e Customer or Employee) at runtime.
+ * @see  com.github.arocketman.test.PolymorphismTest
  */
 public class Polymorphism {
 
@@ -54,10 +55,6 @@ public class Polymorphism {
         }
 
     }
-
-
-
-
 
 }
 
